@@ -6,13 +6,31 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		6572A6972D47CE470002ED01 /* FlowKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6572A6962D47CE470002ED01 /* FlowKit */; };
+		6572A69A2D47CE520002ED01 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 6572A6992D47CE520002ED01 /* Alamofire */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		6572A5702D47CA1F0002ED01 /* cookingRecipe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cookingRecipe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		6572A60A2D47CCFF0002ED01 /* Exceptions for "cookingRecipe" folder in "cookingRecipe" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 6572A56F2D47CA1F0002ED01 /* cookingRecipe */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		6572A5722D47CA1F0002ED01 /* cookingRecipe */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				6572A60A2D47CCFF0002ED01 /* Exceptions for "cookingRecipe" folder in "cookingRecipe" target */,
+			);
 			path = cookingRecipe;
 			sourceTree = "<group>";
 		};
@@ -23,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6572A6972D47CE470002ED01 /* FlowKit in Frameworks */,
+				6572A69A2D47CE520002ED01 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +85,8 @@
 			);
 			name = cookingRecipe;
 			packageProductDependencies = (
+				6572A6962D47CE470002ED01 /* FlowKit */,
+				6572A6992D47CE520002ED01 /* Alamofire */,
 			);
 			productName = cookingRecipe;
 			productReference = 6572A5702D47CA1F0002ED01 /* cookingRecipe.app */;
@@ -94,6 +116,10 @@
 			);
 			mainGroup = 6572A5672D47CA1F0002ED01;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				6572A6952D47CE470002ED01 /* XCRemoteSwiftPackageReference "FlowKit" */,
+				6572A6982D47CE520002ED01 /* XCRemoteSwiftPackageReference "alamofire" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 6572A5712D47CA1F0002ED01 /* Products */;
 			projectDirPath = "";
@@ -255,6 +281,7 @@
 				DEVELOPMENT_TEAM = 688647KH4L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = cookingRecipe/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -284,6 +311,7 @@
 				DEVELOPMENT_TEAM = 688647KH4L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = cookingRecipe/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -324,6 +352,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6572A6952D47CE470002ED01 /* XCRemoteSwiftPackageReference "FlowKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Mercen-Lee/FlowKit?tab=readme-ov-file";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		6572A6982D47CE520002ED01 /* XCRemoteSwiftPackageReference "alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/alamofire/alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6572A6962D47CE470002ED01 /* FlowKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6572A6952D47CE470002ED01 /* XCRemoteSwiftPackageReference "FlowKit" */;
+			productName = FlowKit;
+		};
+		6572A6992D47CE520002ED01 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6572A6982D47CE520002ED01 /* XCRemoteSwiftPackageReference "alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6572A5682D47CA1F0002ED01 /* Project object */;
 }

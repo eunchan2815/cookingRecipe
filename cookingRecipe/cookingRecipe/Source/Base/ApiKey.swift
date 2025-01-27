@@ -7,4 +7,4 @@
 
 import Foundation
 
-let apiKey = "c3440255d8684577b5b0"
+let apiKey = Bundle.main.object(forInfoDictionaryKey: "APIKey") as! String

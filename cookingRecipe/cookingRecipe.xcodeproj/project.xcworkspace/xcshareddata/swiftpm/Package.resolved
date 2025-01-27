@@ -1,0 +1,24 @@
+{
+  "originHash" : "2ea48056be3b5aa621cfb62b85196a580b1c067a0ce0aae273e2cd7ee99b88d1",
+  "pins" : [
+    {
+      "identity" : "alamofire",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/alamofire/alamofire",
+      "state" : {
+        "revision" : "513364f870f6bfc468f9d2ff0a95caccc10044c5",
+        "version" : "5.10.2"
+      }
+    },
+    {
+      "identity" : "flowkit?tab=readme-ov-file",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Mercen-Lee/FlowKit?tab=readme-ov-file",
+      "state" : {
+        "branch" : "main",
+        "revision" : "71ee3f7414747e16f320a6f6b424152e22d9d694"
+      }
+    }
+  ],
+  "version" : 3
+}
