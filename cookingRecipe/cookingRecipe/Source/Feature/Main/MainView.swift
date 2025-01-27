@@ -22,6 +22,8 @@ struct MainView: View {
                 }
             Spacer()
         }
+        Spacer()
+        .ignoresSafeArea(.all)
     }
 }
 

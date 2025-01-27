@@ -39,7 +39,7 @@ struct SettingView: View {
                 Button {
                     num -= 1
                 } label: {
-                    Image(colorScheme == .dark ? .wMinus : .wMinus)
+                    Image(colorScheme == .dark ? .wMinus : .minus)
                         .resizable()
                         .frame(width: 25, height: 25)
                 }
@@ -57,6 +57,7 @@ struct SettingView: View {
                     
                 }
             }
+            .padding(.vertical, 14)
             
             Spacer()
         }
