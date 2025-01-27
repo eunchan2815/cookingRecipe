@@ -6,11 +6,16 @@
 //
 
 import SwiftUI
+import FlowKit
 
 struct MainView: View {
+    @Flow var flow
     @StateObject private var recipeVM = RecipeViewModel()
     var body: some View {
         VStack {
+            HeaderView {
+                flow.push(SettingView())
+            }
             CustomTextField(text: $recipeVM.foodName)
                 .onSubmit {
                     recipeVM.fetchRecipes()
