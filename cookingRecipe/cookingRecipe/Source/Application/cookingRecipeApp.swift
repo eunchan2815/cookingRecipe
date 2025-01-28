@@ -6,13 +6,12 @@
 //
 
 import SwiftUI
-import FlowKit
 
 @main
 struct cookingRecipeApp: App {
     var body: some Scene {
         WindowGroup {
-            FlowPresenter(rootView: MainView())
+            MainView()
         }
     }
 }

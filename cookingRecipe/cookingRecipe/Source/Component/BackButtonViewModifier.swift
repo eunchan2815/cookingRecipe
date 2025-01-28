@@ -6,10 +6,9 @@
 //
 
 import SwiftUI
-import FlowKit
 
 struct BackButtonViewModifier: ViewModifier {
-    @Flow var flow
+    @Environment(\.dismiss) var dismiss
     @Environment(\.colorScheme) var colorScheme
     func body(content: Content) -> some View {
         content
@@ -17,7 +16,7 @@ struct BackButtonViewModifier: ViewModifier {
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button(action: {
-                        flow.pop()
+                        dismiss()
                     }) {
                         HStack {
                             Image(systemName: "chevron.left")

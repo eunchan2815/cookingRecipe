@@ -58,10 +58,9 @@ struct SettingView: View {
                 }
             }
             .padding(.vertical, 14)
-            
-            Spacer()
         }
         .addBackButton()
+        Spacer()
     }
 }
 

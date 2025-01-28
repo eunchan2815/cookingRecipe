@@ -6,24 +6,26 @@
 //
 
 import SwiftUI
-import FlowKit
 
 struct MainView: View {
-    @Flow var flow
     @StateObject private var recipeVM = RecipeViewModel()
+    @State private var navigate = false
     var body: some View {
-        VStack {
-            HeaderView {
-                flow.push(SettingView())
-            }
-            CustomTextField(text: $recipeVM.foodName)
+        NavigationStack {
+            VStack {
+                HeaderView { navigate = true }
+                CustomTextField(text: $recipeVM.foodName, action: {
+                    recipeVM.fetchRecipes()
+                })
                 .onSubmit {
                     recipeVM.fetchRecipes()
                 }
-            Spacer()
+                Spacer()
+            }
+            .navigationDestination(isPresented: $navigate) {
+                SettingView()
+            }
         }
-        Spacer()
-        .ignoresSafeArea(.all)
     }
 }
 

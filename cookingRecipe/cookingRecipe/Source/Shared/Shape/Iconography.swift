@@ -11,6 +11,7 @@ enum Iconography: String {
     case appIcon = "Fork"
     case setting = "Setting"
     case book = "Book"
+    case search = "Search"
     
     case headset = "BHeadset"
     case key = "BKey"
