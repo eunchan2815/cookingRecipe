@@ -6,5 +6,14 @@
 	<array/>
 	<key>APIKey</key>
     <string>c3440255d8684577b5b0</string>
+	<key>UIAppFonts</key>
+<array>
+    <string>ReadexPro-ExtraLight.ttf</string>
+	<string>ReadexPro-Bold.ttf</string>
+	<string>ReadexPro-Light.ttf</string>
+	<string>ReadexPro-SemiBold.ttf</string>
+	<string>ReadexPro-Medium.ttf</string>
+	<string>ReadexPro-Regular.ttf</string>
+</array>
 </dict>
 </plist>

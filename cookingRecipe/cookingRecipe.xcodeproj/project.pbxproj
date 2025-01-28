@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6572A6972D47CE470002ED01 /* FlowKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6572A6962D47CE470002ED01 /* FlowKit */; };
 		6572A69A2D47CE520002ED01 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 6572A6992D47CE520002ED01 /* Alamofire */; };
 /* End PBXBuildFile section */
 
@@ -41,7 +40,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6572A6972D47CE470002ED01 /* FlowKit in Frameworks */,
 				6572A69A2D47CE520002ED01 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -85,7 +83,6 @@
 			);
 			name = cookingRecipe;
 			packageProductDependencies = (
-				6572A6962D47CE470002ED01 /* FlowKit */,
 				6572A6992D47CE520002ED01 /* Alamofire */,
 			);
 			productName = cookingRecipe;
@@ -117,7 +114,6 @@
 			mainGroup = 6572A5672D47CA1F0002ED01;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				6572A6952D47CE470002ED01 /* XCRemoteSwiftPackageReference "FlowKit" */,
 				6572A6982D47CE520002ED01 /* XCRemoteSwiftPackageReference "alamofire" */,
 			);
 			preferredProjectObjectVersion = 77;
@@ -354,14 +350,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		6572A6952D47CE470002ED01 /* XCRemoteSwiftPackageReference "FlowKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Mercen-Lee/FlowKit?tab=readme-ov-file";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
 		6572A6982D47CE520002ED01 /* XCRemoteSwiftPackageReference "alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/alamofire/alamofire";
@@ -373,11 +361,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		6572A6962D47CE470002ED01 /* FlowKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 6572A6952D47CE470002ED01 /* XCRemoteSwiftPackageReference "FlowKit" */;
-			productName = FlowKit;
-		};
 		6572A6992D47CE520002ED01 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 6572A6982D47CE520002ED01 /* XCRemoteSwiftPackageReference "alamofire" */;
