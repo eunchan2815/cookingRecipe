@@ -24,6 +24,12 @@ enum Iconography: String {
     case minus = "Minus"
     case whitePlus = "WPlus"
     case whiteMinus = "WMinus"
+    
+    case burger = "Burger"
+    case sushi = "Sushi"
+    case rice = "Rice"
+    case carrot = "Carrot"
+    
 }
 
 extension Image {

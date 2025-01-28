@@ -20,6 +20,13 @@ struct MainView: View {
                 .onSubmit {
                     recipeVM.fetchRecipes()
                 }
+                CategoryButton {
+                    print("hello")
+                }
+                RecommendFood()
+                    .padding(.vertical, 14)
+                Spacer()
+                PopularFood()
                 Spacer()
             }
             .navigationDestination(isPresented: $navigate) {
