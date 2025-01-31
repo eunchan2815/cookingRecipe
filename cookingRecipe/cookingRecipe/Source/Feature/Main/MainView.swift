@@ -10,6 +10,7 @@ import SwiftUI
 struct MainView: View {
     @StateObject private var recipeVM = RecipeViewModel()
     @State private var navigate = false
+    
     var body: some View {
         NavigationStack {
             VStack {
@@ -20,11 +21,16 @@ struct MainView: View {
                 .onSubmit {
                     recipeVM.fetchRecipes()
                 }
-                Spacer()
+                CategoryButton {
+                    print("hello")
+                }
+                
+                SearchView(recipeVM: recipeVM)
             }
-            .navigationDestination(isPresented: $navigate) {
-                SettingView()
-            }
+            Spacer()
+                .navigationDestination(isPresented: $navigate) {
+                    SettingView()
+                }
         }
     }
 }

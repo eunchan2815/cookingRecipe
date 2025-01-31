@@ -8,45 +8,6 @@
 import SwiftUI
 
 struct SettingButton: View {
-    enum button {
-        case call
-        case notion
-        case coin
-        
-        var role: String {
-            switch self {
-            case .call:
-                "문의하기"
-            case .notion:
-                "개인정보 처리방침"
-            case .coin:
-                "후원하기"
-            }
-        }
-        
-        var image: Image {
-            switch self {
-            case .call:
-                Image(icon: .headset)
-            case .notion:
-                Image(icon: .key)
-            case .coin:
-                Image(icon: .coin)
-            }
-        }
-        
-        var blackImage: Image {
-            switch self {
-            case .call:
-                Image(icon: .whiteHeadset)
-            case .notion:
-                Image(icon: .whiteKey)
-            case .coin:
-                Image(icon: .whiteCoin)
-            }
-        }
-    }
-    
     @State var selectedButton: button
     @Environment(\.colorScheme) var colorScheme
     let action: () -> Void
@@ -71,6 +32,7 @@ struct SettingButton: View {
                 }
                 .padding(.leading, 35)
             }
+            .padding(.vertical, 2)
         }
     }
 }

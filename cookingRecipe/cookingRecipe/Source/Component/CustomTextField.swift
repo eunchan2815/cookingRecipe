@@ -23,7 +23,7 @@ struct CustomTextField: View {
             }
             TextField("검색어를 입력하세요", text: $text)
                 .keyboardType(.webSearch)
-                .tint(.red)
+                .tint(.main)
                 .padding(.vertical, 14)
         }
         .overlay {

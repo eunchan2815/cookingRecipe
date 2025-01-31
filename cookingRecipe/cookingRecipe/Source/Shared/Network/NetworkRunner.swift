@@ -1,10 +1,3 @@
-//
-//  NetworkRunner.swift
-//  cookingRecipe
-//
-//  Created by dgsw30 on 1/27/25.
-//
-
 import Foundation
 import Alamofire
 
@@ -21,16 +14,23 @@ struct NetworkRunner {
         return session
     }()
     
-    func recipeRequest<Parameters: Encodable, Response: Decodable> (
+    func recipeRequest<Response: Decodable>(
         url: String,
         method: HTTPMethod,
-        parameters: Parameters,
+        parameters: [String: String] = [:],
         response: Response.Type = VoidResponse.self,
         completionHandler: @escaping (Result<Response, Error>) -> Void
     ) {
+        var components = URLComponents(string: baseUrl + url)!
         
-        session.request (
-            baseUrl + url,
+        if !parameters.isEmpty {
+            components.queryItems = parameters.map { URLQueryItem(name: $0.key, value: $0.value) }
+        }
+        
+        let finalURL = components.url!
+        
+        session.request(
+            finalURL,
             method: method,
             parameters: parameters,
             encoder: URLEncodedFormParameterEncoder.default
