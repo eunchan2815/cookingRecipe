@@ -13,7 +13,7 @@ struct RecommendFood: View {
         VStack {
             HStack {
                 Text("이런 레시피는 어때요?")
-                    .font(.customFont(weight: .medium, size: 20))
+                    .font(.customFont(weight: .semiBold, size: 22))
                 Spacer()
                 
                 Button {
@@ -24,8 +24,9 @@ struct RecommendFood: View {
             }
             .padding(.horizontal)
         }
+        Spacer()
         .onAppear {
-            recipeVM.fetchRecipes()
+//            recipeVM.fetchRecipes()
         }
     }
 }

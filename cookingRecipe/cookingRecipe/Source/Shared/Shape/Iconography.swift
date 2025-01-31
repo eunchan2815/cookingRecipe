@@ -30,6 +30,9 @@ enum Iconography: String {
     case rice = "Rice"
     case carrot = "Carrot"
     
+    
+    case cal = "Cal"
+    case calDark = "CalBlack"
 }
 
 extension Image {

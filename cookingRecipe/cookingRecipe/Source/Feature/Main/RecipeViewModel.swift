@@ -7,20 +7,24 @@
 
 import Foundation
 
-class RecipeViewModel: ObservableObject  {
+class RecipeViewModel: ObservableObject {
     @Published var foodName = ""
+    @Published var recipes: [Recipe] = []
+    @Published var isLoading = false
     
     func fetchRecipes() {
-        let pararams: [String: String] = [
-            "RCP_NM" : foodName,
-        ]
+        self.isLoading = true
         
-        NetworkRunner.shared.recipeRequest(url: "COOKRCP01/json/1/5" ,method: .get, parameters: pararams) { result in
-            switch result {
-            case .success(let data):
-                print(data)
-            case .failure(let error):
-                print(error)
+        NetworkRunner.shared.recipeRequest(url: "COOKRCP01/json/1/5/RCP_NM=\(foodName)", method: .get, response: RecipeModel.self) { [weak self] result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let data):
+                    self?.recipes = data.cookRcp01?.row ?? []
+                    self!.isLoading = false
+                case .failure(let error):
+                    print(error)
+                    self!.isLoading = false
+                }
             }
         }
     }

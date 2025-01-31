@@ -13,7 +13,7 @@ struct PopularFood: View {
         VStack {
             HStack {
                 Text("요즘 유행하는 음식!")
-                    .font(.customFont(weight: .medium, size: 20))
+                    .font(.customFont(weight: .semiBold, size: 22))
                 Spacer()
                 
                 Button {
@@ -24,8 +24,9 @@ struct PopularFood: View {
             }
             .padding(.horizontal)
         }
+        Spacer()
         .onAppear {
-            recipeVM.fetchRecipes()
+//            recipeVM.fetchRecipes()
         }
     }
 }

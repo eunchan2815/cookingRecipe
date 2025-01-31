@@ -23,7 +23,7 @@ struct SettingView: View {
             .padding(.horizontal)
             
             HStack {
-                Text("레시피 최대 페이지")
+                Text("레시피추천 최대 페이지")
                     .font(.customFont(weight: .semiBold, size: 20))
                 Spacer()
                 
