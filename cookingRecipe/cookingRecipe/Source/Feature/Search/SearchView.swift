@@ -17,6 +17,14 @@ struct SearchView: View {
             }
         }
         ScrollView {
+            if !recipeVM.isLoading {
+                HStack {
+                    Text("검색결과")
+                        .font(.customFont(weight: .semiBold, size: 22))
+                    Spacer()
+                }
+                .padding(.leading, 16)
+            }
             ForEach(recipeVM.recipes, id: \.self) { recipe in
                 SearchResult(recipe: recipe)
                     .padding(.vertical)

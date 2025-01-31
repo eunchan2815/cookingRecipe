@@ -38,6 +38,10 @@ struct Recipe: Codable, Hashable {
     var fullInstructions: String {
         return manualInstructions!.joined(separator: "\n")
     }
+    
+    var clearMaterial: String {
+        return Material.replacingOccurrences(of: "재료", with: "").trimmingCharacters(in: .whitespaces)
+    }
 
     enum CodingKeys: String, CodingKey {
         case Material = "RCP_PARTS_DTLS"

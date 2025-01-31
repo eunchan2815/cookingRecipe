@@ -14,6 +14,7 @@ struct SearchResultDetail: View {
     
     var body: some View {
         ScrollView {
+            //MARK: 음식이미지
             let imageUrl = URL(string: recipe.attFileNoMain)
             KFImage(imageUrl)
                 .placeholder {
@@ -27,6 +28,7 @@ struct SearchResultDetail: View {
                 .clipShape(RoundedRectangle(cornerRadius: 30))
                 .padding(.vertical)
             
+            //MARK: 영양정보
             VStack {
                 ServiceInfoView(info: .info)
                 HStack {
@@ -46,10 +48,25 @@ struct SearchResultDetail: View {
                 }
                 .padding(.bottom, 40)
                 
-                
+                //MARK: 재료
                 ServiceInfoView(info: .material)
+                HStack {
+                    VStack {
+                        Text(recipe.clearMaterial)
+                            .font(.customFont(weight: .light, size: 16))
+                    }
+                    Spacer()
+                }
+                .padding(.leading, 30)
+                .padding(.top, 1)
+                .padding(.bottom, 40)
                 
+                
+                
+                //MARK: 만드는법
                 ServiceInfoView(info: .way)
+                
+                
             }
             .navigationTitle(recipe.rcpName)
             .font(.customFont(weight: .bold, size: 30))

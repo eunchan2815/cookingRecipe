@@ -8,7 +8,7 @@
 import Foundation
 
 class RecipeViewModel: ObservableObject {
-    @Published var foodName = ""
+    @Published var foodName = "라면"
     @Published var recipes: [Recipe] = []
     @Published var isLoading = false
     
