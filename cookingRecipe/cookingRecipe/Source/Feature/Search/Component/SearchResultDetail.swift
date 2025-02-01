@@ -75,6 +75,6 @@ struct SearchResultDetail: View {
     }
 }
 
-#Preview {
-    SearchResultDetail(recipe: Recipe(Material: "", rcpWay: "", foodCategory: "", manualImgs: [""], infoNa: "fd", infoFat: "fd", infoCar: "dd", infoPro: "fd", rcpName: "fd", manualInstructions: ["fdf"], attFileNoMk: "", attFileNoMain: ""))
-}
+//#Preview {
+//    SearchResultDetail(recipe: Recipe(Material: "", rcpWay: "", foodCategory: "", manualImgs: [""], infoNa: "fd", infoFat: "fd", infoCar: "dd", infoPro: "fd", rcpName: "fd", manualInstructions: ["fdf"], attFileNoMk: "", attFileNoMain: ""))
+//}
